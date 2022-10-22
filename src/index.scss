@@ -18,7 +18,25 @@ a {
 .text-secondary {
    color: $secondary-color;
 }
-main {
-   height: 100%;
-   width: 100%;
+#app-container {
+   width: 75vw;
+   header {
+	   // background-color: lighten($primary-color, 10%);
+   }
+   main {
+	  height: 100%;
+	  width: 100%;
+   }
+   footer {
+	  width: 100%;
+	  background-color: darken($primary-color, 10%);
+	  .footer-content {
+		  &__social-icon {
+			  margin: 0 auto;
+			  &__link {
+				  font-size: 2.25rem;
+			  }
+		  }
+	  }
+   }
 }
