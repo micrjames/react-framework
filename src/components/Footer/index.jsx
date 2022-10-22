@@ -1,10 +1,11 @@
 import './index.scss';
 
-const Footer = ({ icons }) => {
+const Footer = ({ text, icons }) => {
 	return (
 		<footer>
-	   		<div className="footer-content">
-	   			<div className="footer-content__social-icon">
+	   	       <div className="footer-content">
+		{icons &&
+	   		<div className="footer-content__social-icon">
 				   {icons.map(icon => (
 					  <a
                           key ={icon.id}
@@ -16,11 +17,11 @@ const Footer = ({ icons }) => {
                            {icon.icon}
                        </a>
                     ))}
-	   			</div>
-	   			<div className="footer-content__signature">
+	   			</div>}
+{text && <div className="footer-content__signature">
 					 &copy;mrjDevs 2021
 	   			</div>
-			</div>
+			</div>}
 		</footer>
 	);
 };
